@@ -1,0 +1,11 @@
+
+services:
+  api:
+    build: .
+    container_name: sundriapi
+    ports:
+      - "8000:8000"
+    volumes:
+      # Monta o diretório atual no diretório /app do contêiner
+      # para que as alterações no código sejam refletidas (hot-reloading)
+      - .:/app
